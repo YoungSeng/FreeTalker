@@ -121,6 +121,12 @@ python -m train.train_mdm --save_dir save/my_v3_0 --overwrite --batch_size 256 -
 
 Then you will get the model in `./save/my_v3_0` fold.
 
+
+### Issues
+
+We noticed that the generated results sometimes have sudden changes in orientation, which may be related to the diversity of character motions in HUMANML3D, which may be optimized by data preprocessing or by better motion representation.
+
+
 ### Bibtex
 If you find this code useful in your research, please cite:
 
