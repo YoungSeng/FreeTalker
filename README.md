@@ -25,6 +25,13 @@ python -m sample.double_take --save_dir '' --guidacnce_param 1 --model_name mode
 
 Then you can find the generated video in the `./save/my_v3_0/model001000000` folder.
 
+<details>
+  <summary><b>Video result</b></summary>
+  
+https://github.com/YoungSeng/FreeTalker/assets/37477030/a29d261c-d62c-457b-8a94-fb73e263ae73
+
+</details>
+
 You can use the following command to generate the video with audio:
 
 ```gitignore
@@ -32,15 +39,27 @@ python -m sample.double_take --save_dir '' --guidacnce_param 1 --model_name mode
 python -m process.merge_mp4_audio --video_file ./save/my_v3_0/model001000000/positions_vis1_1.0_vis_controls.mp4 
 ```
 
+<details>
+  <summary><b>Video result with audio</b></summary>
+  
+https://github.com/YoungSeng/FreeTalker/assets/37477030/718c98ff-9b47-44e9-a0e0-467d8c5b6d67
 
+</details>
 
-(Optional) You might use [human_body_prior](https://github.com/nghorbani/human_body_prior) and `mdm_motion2smpl.py` generate SMPLX motion from the generated file (Note that you need to modify `mdm_motion2smpl.py` and the environment of `human_body_prior` is tested on `NVIDIA GeForce RTX 2080 Ti` and `CUDA Version: 12.2`):
+(Optional) You might use [human_body_prior](https://github.com/nghorbani/human_body_prior) and `mdm_motion2smpl.py` generate SMPLX motion (without hands/fingers) from the generated file (Note that you need to modify `mdm_motion2smpl.py` and the environment of `human_body_prior` is tested on `NVIDIA GeForce RTX 2080 Ti` and `CUDA Version: 12.2`):
 
 ```gitignore
 python ../human_body_prior/tutorials/mdm_motion2smpl.py --input ./save/my_v3_0/model001000000/result_rec_1.0.npy --output ./save/my_v3_0/model001000000/result_rec_1.0_smplx.npz
 ```
 
 And then you can use [blender](https://www.blender.org/) to view the SMPLX motion.
+
+<details>
+  <summary><b>Video result converted to SMPLX</b></summary>
+
+https://github.com/YoungSeng/FreeTalker/assets/37477030/2453db32-669d-41a3-a5e0-7bfbddc5ce68
+
+</details>
 
 ## 3. Retraining the model
 
