@@ -17,7 +17,7 @@ pip install git+https://github.com/openai/CLIP.git
 
 ## 2. Quick start
 
-Download the pre-trained model from [Google Disk](https://drive.google.com/drive/folders/1M2m_3S5I5SgnPU1bWNeX0r2wKWDV9maW?usp=sharing) or [Baidu Disk](链接：https://pan.baidu.com/s/1Daid71D5-7RiSQ_9VqSzwA?pwd=bdzb) and place it in the `./save` folder.
+Download the pre-trained model from [Google Disk](https://drive.google.com/drive/folders/1M2m_3S5I5SgnPU1bWNeX0r2wKWDV9maW?usp=sharing) or [Baidu Disk](https://pan.baidu.com/s/1Daid71D5-7RiSQ_9VqSzwA?pwd=bdzb) and place it in the `./save` folder.
 
 ```gitignore
 python -m sample.double_take --save_dir '' --guidacnce_param 1 --model_name model001000000 --BEAT_wav_feat ./datasets/BEAT/my_wav_feat/ --HUMANML3D_text_feat ./datasets/SMPLX/HumanML3D/v3_HUMANML3D_txt_feat/ --clip_model_path ./data/clip --vis_mode customized_controls
