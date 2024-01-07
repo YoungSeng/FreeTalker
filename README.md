@@ -69,7 +69,7 @@ https://github.com/YoungSeng/FreeTalker/assets/37477030/2453db32-669d-41a3-a5e0-
 
 Text2motion [Text](https://github.com/EricGuo5513/HumanML3D/blob/main/HumanML3D/texts.zip) and [Mapping](https://github.com/EricGuo5513/HumanML3D/blob/99b33e1cc7826ae96b0ee11a734453e250e5e75f/index.csv) we have provided in the `./prepare` folder.
 
-Download Text2Motion motion files in SMPLX format from [AMASS](https://amass.is.tue.mpg.de/) and place them in the `... your path/datasets/SMPLX/` folder:
+Download Text2Motion motion files in SMPLX format from [AMASS](https://amass.is.tue.mpg.de/) and place them in the `./datasets/SMPLX/` folder:
 
 <div align=center>
 <img src="img.png" width="170px">
@@ -90,10 +90,12 @@ Download updated BEAT from [here](https://drive.google.com/file/d/1Akf0WgAwuH2fv
 
 ```gitignore
 cd ../process
-python BEAT2smplx.py --source_BEAT_path ./datasets/BEAT/beat_english_v0.2.1/ --save_BEAT_smplx_path ./datasets/BEAT/my_smplx
+python BEAT2smplx.py --source_BEAT_path ../datasets/BEAT/beat_english_v0.2.1/ --save_BEAT_smplx_path ../datasets/BEAT/my_smplx
 ```
 
 #### Prepare features
+
+Download the [WavLM Large](https://github.com/microsoft/unilm/tree/master/wavlm) and put it into `./data/wavlm_cache/` folder.
 
 Download SMPL-X Model from [here](https://smpl-x.is.tue.mpg.de/) or from **2. Quick start**.
 
