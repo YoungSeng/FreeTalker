@@ -196,8 +196,8 @@ def vis_controls(guidacnce_param=0):
 
     def sequence_1():
 
-        test_audio_feat_1 = np.load("./data/BEAT/my_downsample/val/audio/2_scott_0_14_14.npy")  # (619, 1133) 20fps
-        test_audio_feat_2 = np.load("./data/BEAT/my_downsample/val/audio/2_scott_0_37_37.npy")
+        test_audio_feat_1 = np.load("./datasets/BEAT/my_downsample/val/audio/2_scott_0_14_14.npy")  # (619, 1133) 20fps
+        test_audio_feat_2 = np.load("./datasets/BEAT/my_downsample/val/audio/2_scott_0_37_37.npy")
         test_feat_list = [test_audio_feat_1[:segment_length - 20],
                           test_audio_feat_1[segment_length - 20:segment_length * 2 - 40],
                           test_audio_feat_2[:segment_length - 20],
@@ -216,8 +216,8 @@ def vis_controls(guidacnce_param=0):
         return test_feat_list, text_list, text_length
 
     def sequence_2():
-        test_audio_feat_1 = np.load("./data/BEAT/my_downsample/val/audio/4_lawrence_0_19_19.npy")  # (619, 1133) 20fps
-        test_audio_feat_2 = np.load("./data/BEAT/my_downsample/val/audio/4_lawrence_0_35_35.npy")
+        test_audio_feat_1 = np.load("./datasets/BEAT/my_downsample/val/audio/4_lawrence_0_19_19.npy")  # (619, 1133) 20fps
+        test_audio_feat_2 = np.load("./datasets/BEAT/my_downsample/val/audio/4_lawrence_0_35_35.npy")
         test_feat_list = [test_audio_feat_1[:segment_length - 20],
                           test_audio_feat_1[segment_length - 20:segment_length * 2 - 40],
                           test_audio_feat_2[:segment_length - 20],
@@ -281,7 +281,7 @@ def customized_controls(guidacnce_param=0):
     clip_model = clip_init(clip_model_path, device)
     # feat = encode_text(clip_model, 'a person walks forward.')
 
-    test_audio_feat = np.load("./data/BEAT/my_downsample/val/audio/2_scott_0_55_55.npy")     # (619, 1133) 20fps
+    test_audio_feat = np.load("./datasets/BEAT/my_downsample/val/audio/2_scott_0_55_55.npy")     # (619, 1133) 20fps
     test_feat_list = [test_audio_feat[:segment_length-20], test_audio_feat[segment_length-20:segment_length*2-40], test_audio_feat[segment_length*2-40:segment_length*3-60], test_audio_feat[segment_length*3:segment_length*4]]
     test_feat_list = [np.expand_dims(np.vstack([np.zeros_like(i)[:10], i, np.zeros_like(i)[:10]]), axis=0) for i in test_feat_list]
 
