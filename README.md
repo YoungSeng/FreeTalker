@@ -1,6 +1,6 @@
 # Freetalker: Controllable Speech and Text-Driven Gesture Generation Based on Diffusion Models for Enhanced Speaker Naturalness
 
-### [Homepage](https://youngseng.github.io/FreeTalker/) | [Arxiv]() | [Demo Video](https://www.youtube.com/watch?v=jFovElT8VOk)
+### [Homepage](https://youngseng.github.io/FreeTalker/) | [Arxiv](https://arxiv.org/abs/2401.03476) | [Demo Video](https://www.youtube.com/watch?v=jFovElT8VOk)
 
 
 ## 1. Experimental setting
