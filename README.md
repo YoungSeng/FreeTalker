@@ -10,7 +10,7 @@ The code is tested on `NVIDIA GeForce RTX 4090` and `CUDA Version: 12.2`. The en
 ```gitignore
 conda env create -f environment_priormdm.yml
 conda activate PriorMDM
-pip install bvh librosa essentia pydub praat-parselmouth torchgeometry moviepy
+pip install bvh librosa essentia pydub praat-parselmouth torchgeometry moviepy matplotlib==3.1.3
 pip install smplx[all]
 pip install git+https://github.com/openai/CLIP.git
 ```
