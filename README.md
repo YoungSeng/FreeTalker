@@ -105,7 +105,7 @@ python process_amass.py --source_HumanML3D_motion ../datasets/SMPLX/HumanML3D/mo
 # Extract audio/text features and downsample BEAT dataset, split the dataset into train/val/test
 bash process_dataset.sh "prepare" "../datasets/BEAT" "../datasets/SMPLX/HumanML3D" "../data/wavlm_cache/WavLM-Large.pt" "../data/clip" "../data/prcocessed_data"
 # Convert the motion format of the SMPLX to position, and extract the motion features
-bash process_SMPLX.sh "../support_data/dowloads/models/" '../datasets/BEAT/my_downsample' "../datasets/SMPLX/HumanML3D/"
+bash process_SMPLX.sh "../human_body_prior/support_data/dowloads/models/" '../datasets/BEAT/my_downsample' "../datasets/SMPLX/HumanML3D/"
 # Generate h5 file and calculate the statistics of the motion
 bash process_dataset.sh "generate_h5_file" "../datasets/BEAT" "../datasets/SMPLX/HumanML3D" "../data/wavlm_cache/WavLM-Large.pt" "../data/clip" "../data/prcocessed_data"
 ```
